@@ -1,0 +1,29 @@
+{
+    "name": "mdbtq/laravel-robots",
+    "description": "Dynamic robots.txt generation for Laravel",
+    "keywords": ["laravel", "robots", "robots.txt", "seo"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Arne Hendriksen"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mdbtq\\Robots\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mdbtq\\Robots\\RobotsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
