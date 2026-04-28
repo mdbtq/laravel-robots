@@ -17,6 +17,14 @@ class RobotsController
                 $lines[] = 'Disallow: ' . $path;
             }
 
+            foreach (config('robots.agents', []) as $agent => $agentRules) {
+                $lines[] = '';
+                $lines[] = 'User-agent: ' . $agent;
+                foreach ($agentRules as $directive => $path) {
+                    $lines[] = ucfirst($directive) . ': ' . $path;
+                }
+            }
+
             $sitemap = config('robots.sitemap');
             if ($sitemap) {
                 $lines[] = '';
